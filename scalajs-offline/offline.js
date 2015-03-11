@@ -105,7 +105,7 @@
           });
       } else {
           return fetch(request.clone()).then(function(response) {
-              if(response.type === 200 ) { // only cache successful responses , as github supports CORS we can check status of response for non supported cors origins we'll get opaque response
+              if(response.status === 200 ) { // only cache successful responses , as github supports CORS we can check status of response for non supported cors origins we'll get opaque response
                   return caches.open(cacheNameGithub).then(function(cache) {
                       cache.put(request,response.clone())
                       return response;
