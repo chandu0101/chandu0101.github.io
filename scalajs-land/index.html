@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ScalaJS Land</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color : #4F4B4B ;
+            color : rgb(226, 220, 220);
+            line-height: 20px;
+        }
+
+        .contribute {
+            display :flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+            font-size : 14px;
+            padding : 50px;
+        }
+
+        .contribute .form {
+            display : flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+            box-shadow : 0 2px 4px black;
+            width : 500px;
+            padding : 40px;
+            background : transparent;
+        }
+
+        .contribute .form div {
+            margin : 10px;
+        }
+
+        textarea {
+            width : 350px;
+            height : 200px;
+            padding : 9px;
+            border : 1px solid grey;
+            border-radius : 5px;
+            background : transparent;
+            color : rgb(226, 220, 220);
+        }
+
+        input {
+            background : transparent;
+            border : 1px solid grey;
+            border-radius : 5px;
+            padding : 7px;
+            width : 320px;
+            color : rgb(226, 220, 220);
+        }
+
+        input:focus {
+            border : 1px solid orange;
+            outline:none;
+        }
+
+        textarea:focus {
+            border : 1px solid orange;
+            outline:none;
+        }
+
+        select {
+            background : transparent;
+            color : rgb(226, 220, 220);
+            margin-left: 20px;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        select:focus {
+            outline : none;
+            border : 1px solid orange;
+        }
+        .contribute a {
+            display: inline-block;
+            padding: 5px 14px;
+            background-color: #EF5350;
+            border: 1px solid transparent;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            cursor: pointer;
+            color: #ffffff;
+            font-weight: bold;
+            -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+            -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .contribute a:hover,
+        .contribute a:focus {
+            text-decoration: none;
+            background-color: #ff1034;
+        }
+        .contribute h3 {
+            font-weight: 500;
+            font-size: 15px;
+            color : rgb(18, 169, 205);
+        }
+        .contribute .error {
+            color : rgb(25, 229, 190)
+        }
+
+        .contribute .status {
+            color : lawngreen;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+
+<div id="container"></div>
+
+<script>
+    function hola(event) {
+        console.log("man its possible + " +  event)
+    }
+</script>
+
+<!-- Include JavaScript dependencies -->
+<script type="text/javascript" src="js/scalajs-land-jsdeps.js"></script>
+<!-- Include Scala.js compiled code -->
+<script type="text/javascript" src="js/scalajs-land-opt.js"></script>
+<!-- Run JSApp -->
+<script>chandu0101.scalajs.land.ReactApp().main()</script>
+</body>
+</html>
