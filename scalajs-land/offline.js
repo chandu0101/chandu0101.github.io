@@ -56,6 +56,10 @@
         );
     });
 
+    if (requestURL.hostname.indexOf(".github.com") > -1) {
+        event.respondWith(githubAPIResponse(event.request))
+    }
+
     // when a network request made from app
     self.addEventListener("fetch", function (event) {
         var requestURL = new URL(event.request.url);
@@ -69,7 +73,7 @@
                     return fetch(fetchRequest).then( // if not cached get from network return it and then cache it
                         function (response) {
                             var shouldCache = false;
-                            if (response.type === "basic" && response.status === 200) {
+                            if (requestURL.hostname.indexOf(".cloudant.com") < 0 && response.type === "basic" && response.status === 200) {
                                 shouldCache = cacheNameStatic;
                             }
                             if (shouldCache) {
